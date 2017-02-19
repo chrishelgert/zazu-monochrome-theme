@@ -1,0 +1,6 @@
+{
+  "name": "Snazzy Theme",
+  "version": "1.0.0",
+  "description": "A hyper-snazzy inspired theme for Zazu",
+  "stylesheet": "dist/main.css"
+}

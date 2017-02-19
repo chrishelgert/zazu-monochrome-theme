@@ -1,0 +1,130 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.playbook {
+  background-color: #282a36;
+}
+
+.playbook .github-corner > svg {
+  fill: #9aedfe;
+  color: #282a36;
+}
+
+#install {
+  color: #eff0eb;
+}
+
+#zazu {
+  background-color: rgba(40, 42, 54, 80);
+  background-position: 530px 5px;
+  background-repeat: no-repeat;
+  background-size: 60px;
+  -webkit-app-region: drag;
+  cursor: move;
+}
+
+#zazu input {
+  outline: none;
+  font-size: 40px;
+  width: 500px;
+  padding: 10px;
+  border: 0;
+  background-color: transparent;
+  -webkit-app-region: no-drag;
+  cursor: auto;
+  color: #eff0eb;
+}
+
+#preview {
+  border: 0;
+}
+
+.results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.results ul {
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid rgba(40, 42, 54, 80);
+  max-height: 333px;
+  overflow: hidden;
+  width: 50%
+}
+
+.results ul:last-child {
+  width: 100%;
+}
+
+.results ul + div {
+  width: 50%;
+}
+
+.results li {
+  display: block;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid rgba(40, 42, 54, 80);
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  width: 100%;
+}
+
+.results li .icon {
+  color: #eff0eb;
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  width: 30px;
+  margin: 7.5px;
+  float: left;
+  opacity: 0.75;
+}
+
+.results li h2,
+.results li h3 {
+  margin: 0;
+  padding-left: 10px;
+  color: #eff0eb;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: "Helvetica Neue", "Calibri Light", "Roboto", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1.15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -mox-osx-font-smoothing: grayscale;
+}
+
+.results li h2 {
+  font-size: 20px;
+  line-height: 25px
+}
+
+.results li h2:last-child {
+  font-size: 20px;
+  line-height: 45px;
+}
+
+.results li h3 {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.results li.active
+.results li:hover {
+  background-color: rgba(40, 42, 54, 80);
+  color: #57c7ff;
+}
+
+/*# sourceMappingURL=main.css.map */
