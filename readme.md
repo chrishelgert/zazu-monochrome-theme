@@ -1,3 +1,29 @@
-# Snazzy Theme [WIP]
+# Zazu Monochrome Theme
 
-A [hyper-snazzy](https://github.com/sindresorhus/hyper-snazzy) inspired theme for Zazu.
+[![Build Status](https://travis-ci.org/chrishelgert/zazu-clean-light-theme.svg?branch=master)](https://travis-ci.org/chrishelgert/zazu-clean-light-theme)
+
+> A monochrome theme for [Zazu](https://github.com/tinytacoteam/zazu).
+
+![screenshot](./screenshot.png)
+
+## Install
+
+Add `chrishelgert/zazu-monochrome-theme` to your theme block inside your `.zazurc.json` file.
+
+```json
+{
+  "theme": ["chrishelgert/zazu-monochrome-theme"]
+}
+```
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create new Pull Request
+
+## LICENSE
+
+Copyright (c) 2017 Chris Helgert. See [License](./LICENSE) for details.

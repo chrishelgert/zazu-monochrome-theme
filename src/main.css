@@ -1,71 +1,103 @@
 :root {
-  --foreground: #eff0eb;
-  --background: #282a36;
-  --red: #ff5c57;
-  --green: #5af78e;
-  --yellow: #f3f99d;
-  --blue: #57c7ff;
-  --magenta: #ff6ac1;
-  --cyan: #9aedfe;
-
-  --backgroundTransparent: rgba(40, 42, 54, 80);
+  --light: rgb(255, 255, 255);
+  --dark: rgb(23, 24, 24);
+  --blue: rgb(114, 195, 252);
+  --grayLight: rgb(239, 240, 235);
+  --gray: rgb(222, 226, 230);
+  --grayDark: rgb(73, 80, 87);
+  --fontSize: 14px;
+  --iconSize: 30px;
 }
 
-html, body {
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Calibri Light", "Roboto", sans-serif;
+  font-size: var(--fontSize);
+  font-weight: 300;
+  letter-spacing: 1.15px;
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -mox-osx-font-smoothing: grayscale;
 }
 
+/**
+ * Styling for theme-preview
+ */
 .playbook {
-  background-color: var(--background);
+  background-color: var(--light);
 }
 
-.playbook .github-corner > svg {
-  fill: var(--cyan);
-  color: var(--background);
+.github-corner > svg {
+  color: var(--light);
+  fill: var(--blue);
 }
 
 #install {
-  color: var(--foreground);
+  color: var(--dark);
+  font-size: 1.25em;
 }
 
+/**
+ * Styling for the app
+ */
 #zazu {
-  background-color: var(--backgroundTransparent);
-  background-position: 530px 5px;
-  background-repeat: no-repeat;
-  background-size: 60px;
-  -webkit-app-region: drag;
+  background-color: var(--light);
   cursor: move;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 63px;
+  width: 600px;
+  -webkit-app-region: drag;
 }
 
+/**
+ * command input field
+ */
 #zazu input {
-  outline: none;
-  font-size: 40px;
-  width: 500px;
-  padding: 10px;
-  border: 0;
   background-color: transparent;
-  -webkit-app-region: no-drag;
-  cursor: auto;
-  color: var(--foreground);
-}
-
-#preview {
   border: 0;
+  color: var(--dark);
+  cursor: auto;
+  display: block;
+  font-size: 2em;
+  left: 0;
+  outline: none;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  -webkit-app-region: no-drag;
 }
 
+/**
+ * results under the searchfield,
+ */
 .results {
+  border-top: 1px solid var(--gray);
   display: flex;
   flex-direction: row;
 }
 
+/**
+ * preview-iframe, that could be on the left
+ */
+#preview {
+  border: 0;
+  border-left: 1px solid var(--grayLight);
+}
+
+/**
+ * results-list
+ * is either 100% or 50% if the preview is active
+ */
 .results ul {
-  padding: 0;
   margin: 0;
-  border-top: 1px solid var(--backgroundTransparent);
-  max-height: 333px;
+  height: calc(400px - 63px);
   overflow: hidden;
+  padding: 0;
   width: 50%;
 
   &:last-child {
@@ -73,65 +105,69 @@ html, body {
   }
 }
 
-.results ul + div {
-  width: 50%;
-}
-
 .results li {
-  display: block;
-  height: 45px;
-  line-height: 45px;
-  border-bottom: 1px solid var(--backgroundTransparent);
-  -webkit-app-region: no-drag;
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid var(--grayLight);
   cursor: pointer;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 5px;
   width: 100%;
+  -webkit-app-region: no-drag;
+
+  &:last-child {
+    border-bottom: 0;
+  }
 }
 
 .results li .icon {
-  color: var(--foreground);
-  text-align: center;
-  line-height: 30px;
-  height: 30px;
-  width: 30px;
-  margin: 7.5px;
+  color: var(--dark);
   float: left;
-  opacity: 0.75;
+  height: var(--iconSize);
+  line-height: var(--iconSize);
+  margin: 5px 10px 5px 5px;
+  text-align: center;
+  width: var(--iconSize);
 }
 
 .results li h2,
 .results li h3 {
   margin: 0;
-  padding-left: 10px;
-  white-space: nowrap;
   overflow: hidden;
+  padding-left: 10px;
   text-overflow: ellipsis;
-  font-family: "Helvetica Neue", "Calibri Light", "Roboto", sans-serif;
-  font-weight: 300;
-  letter-spacing: 1.15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -mox-osx-font-smoothing: grayscale;
+  white-space: nowrap;
 }
 
 .results li h2 {
-  color: var(--cyan);
-  font-size: 20px;
+  color: var(--dark);
+  font-size: 1.3em;
   line-height: 25px;
 
   &:last-child {
-    font-size: 20px;
-    line-height: 45px;
+    line-height: 40px;
   }
 }
 
 .results li h3 {
-  color: var(--foreground);
-  font-size: 15px;
+  color: var(--gray);
+  font-size: 1em;
   line-height: 15px;
 }
 
-.results li.active
+.results li.active,
 .results li:hover {
-  background-color: var(--backgroundTransparent);
-  color: var(--blue);
+  background-color: var(--grayLight);
+  border-left: 1px solid var(--blue);
+}
+
+.results li.active h2,
+.results li:hover h2 {
+  color: var(--dark);
+}
+
+.results li.active h3,
+.results li:hover h3 {
+  color: var(--grayDark);
 }

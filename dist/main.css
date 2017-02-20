@@ -1,48 +1,76 @@
-html, body {
+:root {
+
+  /* #f8f9fa, #f1f3f5, #e9ecef, #dee2e6, #ced4da, #adb5bd, #868e96, #495057, #343a40, #212529; */
+}
+
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Helvetica Neue", "Calibri Light", "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.15px;
   margin: 0;
   padding: 0;
-  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -mox-osx-font-smoothing: grayscale;
 }
 
+/**
+ * Styling for theme-preview
+ */
 .playbook {
-  background-color: #282a36;
+  background-color: rgb(255, 255, 255);
 }
 
-.playbook .github-corner > svg {
-  fill: #9aedfe;
-  color: #282a36;
+.github-corner > svg {
+  color: rgb(255, 255, 255);
+  fill: rgb(114, 195, 252);
 }
 
 #install {
-  color: #eff0eb;
+  color: rgb(23, 24, 24);
+  font-size: 1.25em;
 }
 
+/**
+ * Styling for the app
+ */
 #zazu {
-  background-color: rgba(40, 42, 54, 80);
-  background-position: 530px 5px;
-  background-repeat: no-repeat;
-  background-size: 60px;
-  -webkit-app-region: drag;
+  background-color: rgb(255, 255, 255);
   cursor: move;
+  max-height: 400px;
+  overflow: hidden;
+  position: relative;
+  padding-top: 63px;
+  width: 600px;
+  -webkit-app-region: drag;
 }
 
+/**
+ * command input field
+ */
 #zazu input {
-  outline: none;
-  font-size: 40px;
-  width: 500px;
-  padding: 10px;
-  border: 0;
   background-color: transparent;
-  -webkit-app-region: no-drag;
-  cursor: auto;
-  color: #eff0eb;
-}
-
-#preview {
   border: 0;
+  color: rgb(23, 24, 24);
+  cursor: auto;
+  display: block;
+  font-size: 2em;
+  left: 0;
+  outline: none;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  -webkit-app-region: no-drag;
 }
 
+/**
+ * results under the searchfield,
+ */
 .results {
+  border-top: 1px solid rgb(222, 226, 230);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,79 +80,94 @@ html, body {
           flex-direction: row;
 }
 
-.results ul {
-  padding: 0;
-  margin: 0;
-  border-top: 1px solid rgba(40, 42, 54, 80);
-  max-height: 333px;
-  overflow: hidden;
-  width: 50%
+/**
+ * preview-iframe, that could be on the left
+ */
+#preview {
+  border: 0;
+  border-left: 1px solid rgb(239, 240, 235);
 }
 
+/**
+ * results-list
+ * is either 100% or 50% if the preview is active
+ */
+.results ul {
+  margin: 0;
+  height: 337px;
+  overflow: hidden;
+  padding: 0;
+  width: 50%
+}
 .results ul:last-child {
   width: 100%;
 }
 
-.results ul + div {
-  width: 50%;
+.results li {
+  border-left: 1px solid transparent;
+  border-bottom: 1px solid rgb(239, 240, 235);
+  cursor: pointer;
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 5px;
+  width: 100%;
+  -webkit-app-region: no-drag
 }
 
-.results li {
-  display: block;
-  height: 45px;
-  line-height: 45px;
-  border-bottom: 1px solid rgba(40, 42, 54, 80);
-  -webkit-app-region: no-drag;
-  cursor: pointer;
-  width: 100%;
+.results li:last-child {
+  border-bottom: 0;
 }
 
 .results li .icon {
-  color: #eff0eb;
-  text-align: center;
-  line-height: 30px;
-  height: 30px;
-  width: 30px;
-  margin: 7.5px;
+  color: rgb(23, 24, 24);
   float: left;
-  opacity: 0.75;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px 10px 5px 5px;
+  text-align: center;
+  width: 30px;
 }
 
 .results li h2,
 .results li h3 {
   margin: 0;
-  padding-left: 10px;
-  color: #eff0eb;
-  white-space: nowrap;
   overflow: hidden;
+  padding-left: 10px;
   text-overflow: ellipsis;
-  font-family: "Helvetica Neue", "Calibri Light", "Roboto", sans-serif;
-  font-weight: 300;
-  letter-spacing: 1.15px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -mox-osx-font-smoothing: grayscale;
+  white-space: nowrap;
 }
 
 .results li h2 {
-  font-size: 20px;
+  color: rgb(23, 24, 24);
+  font-size: 1.3em;
   line-height: 25px
 }
 
 .results li h2:last-child {
-  font-size: 20px;
-  line-height: 45px;
+  line-height: 40px;
 }
 
 .results li h3 {
-  font-size: 15px;
+  color: rgb(222, 226, 230);
+  font-size: 1em;
   line-height: 15px;
 }
 
-.results li.active
+.results li.active,
 .results li:hover {
-  background-color: rgba(40, 42, 54, 80);
-  color: #57c7ff;
+  background-color: rgb(239, 240, 235);
+  border-left: 1px solid rgb(114, 195, 252);
+}
+
+.results li.active h2,
+.results li:hover h2 {
+  color: rgb(23, 24, 24);
+}
+
+.results li.active h3,
+.results li:hover h3 {
+  color: rgb(73, 80, 87);
 }
 
 /*# sourceMappingURL=main.css.map */

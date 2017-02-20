@@ -1,16 +1,26 @@
 {
-  "name": "zazu-snazzy-theme",
+  "name": "zazu-monochrome-theme",
   "version": "1.0.0",
-  "description": "A hyper-snazzy inspired theme for Zazu.",
+  "description": "A monochrome theme for Zazu.",
   "main": "dist/main.css",
   "scripts": {
     "build": "postcss -u postcss-cssnext -o dist/main.css -m dist/main.css.map src/main.css",
     "lint": "stylelint src/*.css",
-    "precommit": "npm run build && npm run build"
+    "precommit": "npm run lint && npm run build"
   },
   "author": "Chris Helgert",
   "license": "MIT",
-  "dependencies": {},
+  "keywords": [
+    "theme",
+    "zazu"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/chrishelgert/zazu-monochrome-theme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chrishelgert/zazu-monochrome-theme/issues"
+  },
   "devDependencies": {
     "husky": "^0.13.1",
     "postcss-cssnext": "^2.9.0",
