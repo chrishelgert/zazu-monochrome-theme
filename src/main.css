@@ -49,7 +49,6 @@ body {
   max-height: 400px;
   overflow: hidden;
   position: relative;
-  padding-top: 63px;
   width: 600px;
   -webkit-app-region: drag;
 }
@@ -64,11 +63,8 @@ body {
   cursor: auto;
   display: block;
   font-size: 2em;
-  left: 0;
   outline: none;
   padding: 15px;
-  position: fixed;
-  top: 0;
   -webkit-app-region: no-drag;
 }
 
