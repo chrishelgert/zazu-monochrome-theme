@@ -1,10 +1,9 @@
 :root {
   --light: rgb(255, 255, 255);
-  --dark: rgb(23, 24, 24);
-  --blue: rgb(114, 195, 252);
   --grayLight: rgb(239, 240, 235);
   --gray: rgb(222, 226, 230);
   --grayDark: rgb(73, 80, 87);
+  --dark: rgb(23, 24, 24);
   --fontSize: 14px;
   --iconSize: 30px;
 }
@@ -32,7 +31,7 @@ body {
 
 .github-corner > svg {
   color: var(--light);
-  fill: var(--blue);
+  fill: var(--grayDark);
 }
 
 #install {
@@ -155,7 +154,7 @@ body {
 .results li.active,
 .results li:hover {
   background-color: var(--grayLight);
-  border-left: 1px solid var(--blue);
+  border-left: 1px solid var(--grayDark);
 }
 
 .results li.active h2,

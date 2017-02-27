@@ -21,7 +21,7 @@ body {
 
 .github-corner > svg {
   color: rgb(255, 255, 255);
-  fill: rgb(114, 195, 252);
+  fill: rgb(73, 80, 87);
 }
 
 #install {
@@ -148,7 +148,7 @@ body {
 .results li.active,
 .results li:hover {
   background-color: rgb(239, 240, 235);
-  border-left: 1px solid rgb(114, 195, 252);
+  border-left: 1px solid rgb(73, 80, 87);
 }
 
 .results li.active h2,
