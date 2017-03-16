@@ -1,5 +1,7 @@
 # Zazu Monochrome Theme
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/chrishelgert/zazu-monochrome-theme.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/chrishelgert/zazu-clean-light-theme.svg?branch=master)](https://travis-ci.org/chrishelgert/zazu-clean-light-theme)
 
 > A monochrome theme for [Zazu](https://github.com/tinytacoteam/zazu).
