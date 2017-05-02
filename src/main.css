@@ -3,7 +3,7 @@
   --grayLight: rgb(239, 240, 235);
   --gray: rgb(222, 226, 230);
   --grayDark: rgb(73, 80, 87);
-  --dark: rgb(23, 24, 24);
+  --dark: rgb(52, 58, 64);
   --fontSize: 14px;
   --iconSize: 30px;
 }
@@ -26,16 +26,16 @@ body {
  * Styling for theme-preview
  */
 .playbook {
-  background-color: var(--light);
+  background-color: var(--dark);
 }
 
 .github-corner > svg {
-  color: var(--light);
-  fill: var(--grayDark);
+  color: var(--grayDark);
+  fill: var(--dark);
 }
 
 #install {
-  color: var(--dark);
+  color: var(--light);
   font-size: 1.25em;
 }
 
@@ -43,7 +43,7 @@ body {
  * Styling for the app
  */
 #zazu {
-  background-color: var(--light);
+  background-color: var(--dark);
   cursor: move;
   max-height: 400px;
   overflow: hidden;
@@ -58,7 +58,7 @@ body {
 #zazu input {
   background-color: transparent;
   border: 0;
-  color: var(--dark);
+  color: var(--light);
   cursor: auto;
   display: block;
   font-size: 2em;
@@ -71,7 +71,7 @@ body {
  * results under the searchfield,
  */
 .results {
-  border-top: 1px solid var(--gray);
+  border-top: 1px solid var(--grayDark);
   display: flex;
   flex-direction: row;
 }
@@ -81,7 +81,7 @@ body {
  */
 #preview {
   border: 0;
-  border-left: 1px solid var(--grayLight);
+  border-left: 1px solid var(--grayDark);
 }
 
 /**
@@ -102,7 +102,7 @@ body {
 
 .results li {
   border-left: 1px solid transparent;
-  border-bottom: 1px solid var(--grayLight);
+  border-bottom: 1px solid var(--grayDark);
   cursor: pointer;
   display: block;
   height: 50px;
@@ -117,7 +117,7 @@ body {
 }
 
 .results li .icon {
-  color: var(--dark);
+  color: var(--grayLight);
   float: left;
   height: var(--iconSize);
   line-height: var(--iconSize);
@@ -136,7 +136,7 @@ body {
 }
 
 .results li h2 {
-  color: var(--dark);
+  color: var(--light);
   font-size: 1.3em;
   line-height: 25px;
 
@@ -146,23 +146,12 @@ body {
 }
 
 .results li h3 {
-  color: var(--gray);
+  color: var(--grayLight);
   font-size: 1em;
   line-height: 15px;
 }
 
 .results li.active,
 .results li:hover {
-  background-color: var(--grayLight);
-  border-left: 1px solid var(--grayDark);
-}
-
-.results li.active h2,
-.results li:hover h2 {
-  color: var(--dark);
-}
-
-.results li.active h3,
-.results li:hover h3 {
-  color: var(--grayDark);
+  background-color: var(--grayDark);
 }
