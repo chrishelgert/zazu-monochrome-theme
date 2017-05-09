@@ -91,7 +91,7 @@ body {
   width: 50%
 }
 .results ul:last-child {
-  width: 100%;
+    width: 100%;
 }
 
 .results li {
@@ -107,7 +107,7 @@ body {
 }
 
 .results li:last-child {
-  border-bottom: 0;
+    border-bottom: 0;
 }
 
 .results li .icon {
@@ -136,7 +136,7 @@ body {
 }
 
 .results li h2:last-child {
-  line-height: 40px;
+    line-height: 40px;
 }
 
 .results li h3 {
