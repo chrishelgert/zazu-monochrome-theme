@@ -22,7 +22,7 @@
     "url": "https://github.com/chrishelgert/zazu-monochrome-theme/issues"
   },
   "devDependencies": {
-    "husky": "^0.13.3",
+    "husky": "^0.14.0",
     "postcss-cli": "^4.0.0",
     "postcss-cssnext": "^2.9.0",
     "stylelint": "^7.8.0",
