@@ -24,7 +24,7 @@
   "devDependencies": {
     "husky": "^0.14.0",
     "postcss-cli": "^4.0.0",
-    "postcss-cssnext": "^2.9.0",
+    "postcss-cssnext": "^3.0.0",
     "stylelint": "^7.8.0",
     "stylelint-config-standard": "^16.0.0"
   }
