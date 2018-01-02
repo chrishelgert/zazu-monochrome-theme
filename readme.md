@@ -27,4 +27,4 @@ Add `chrishelgert/zazu-monochrome-theme` to your theme block inside your `.zazur
 
 ## LICENSE
 
-Copyright (c) 2017 Chris Helgert. See [License](./LICENSE) for details.
+Copyright (c) 2017-present Chris Helgert. See [License](./LICENSE) for details.
