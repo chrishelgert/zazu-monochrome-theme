@@ -4,7 +4,7 @@
   "description": "A monochrome theme for Zazu.",
   "main": "dist/main.css",
   "scripts": {
-    "build": "postcss -u postcss-cssnext -o dist/main.css -m dist/main.css.map src/main.css",
+    "build": "postcss -u postcss-preset-env -o dist/main.css -m dist/main.css.map src/main.css",
     "test": "stylelint src/*.css",
     "precommit": "npm test && npm run build"
   },
@@ -24,7 +24,7 @@
   "devDependencies": {
     "husky": "^0.14.0",
     "postcss-cli": "^4.1.1",
-    "postcss-cssnext": "^3.0.0",
+    "postcss-preset-env": "^5.1.0",
     "stylelint": "^8.3.1",
     "stylelint-config-standard": "^18.0.0"
   }

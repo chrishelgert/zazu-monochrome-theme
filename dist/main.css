@@ -1,9 +1,19 @@
+:root {
+  --light: rgb(255, 255, 255);
+  --grayLight: rgb(239, 240, 235);
+  --gray: rgb(222, 226, 230);
+  --grayDark: rgb(73, 80, 87);
+  --dark: rgb(52, 58, 64);
+  --fontSize: 14px;
+  --iconSize: 30px;
+}
+
 html,
 body {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Helvetica Neue", "Calibri Light", "Roboto", sans-serif;
   font-size: 14px;
+  font-size: var(--fontSize);
   font-weight: 300;
   letter-spacing: 1.15px;
   margin: 0;
@@ -18,15 +28,19 @@ body {
  */
 .playbook {
   background-color: rgb(52, 58, 64);
+  background-color: var(--dark);
 }
 
 .github-corner > svg {
   color: rgb(73, 80, 87);
+  color: var(--grayDark);
   fill: rgb(52, 58, 64);
+  fill: var(--dark);
 }
 
 #install {
   color: rgb(255, 255, 255);
+  color: var(--light);
   font-size: 1.25em;
 }
 
@@ -35,6 +49,7 @@ body {
  */
 #zazu {
   background-color: rgb(52, 58, 64);
+  background-color: var(--dark);
   cursor: move;
   max-height: 400px;
   overflow: hidden;
@@ -50,6 +65,7 @@ body {
   background-color: transparent;
   border: 0;
   color: rgb(255, 255, 255);
+  color: var(--light);
   cursor: auto;
   display: block;
   font-size: 2em;
@@ -63,13 +79,9 @@ body {
  */
 .results {
   border-top: 1px solid rgb(73, 80, 87);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  border-top: 1px solid var(--grayDark);
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 /**
@@ -78,6 +90,7 @@ body {
 #preview {
   border: 0;
   border-left: 1px solid rgb(73, 80, 87);
+  border-left: 1px solid var(--grayDark);
 }
 
 /**
@@ -86,39 +99,45 @@ body {
  */
 .results ul {
   margin: 0;
-  height: 337px;
+  height: calc(400px - 63px);
   overflow: hidden;
   padding: 0;
-  width: 50%
-}
-.results ul:last-child {
-  width: 100%;
+  width: 50%;
+
+  &:last-child {
+    width: 100%;
+  }
 }
 
 .results li {
   border-left: 1px solid transparent;
   border-bottom: 1px solid rgb(73, 80, 87);
+  border-bottom: 1px solid var(--grayDark);
   cursor: pointer;
   display: block;
   height: 50px;
   line-height: 50px;
   padding: 5px;
   width: 100%;
-  -webkit-app-region: no-drag
-}
+  -webkit-app-region: no-drag;
 
-.results li:last-child {
-  border-bottom: 0;
+  &:last-child {
+    border-bottom: 0;
+  }
 }
 
 .results li .icon {
   color: rgb(239, 240, 235);
+  color: var(--grayLight);
   float: left;
   height: 30px;
+  height: var(--iconSize);
   line-height: 30px;
+  line-height: var(--iconSize);
   margin: 5px 10px 5px 5px;
   text-align: center;
   width: 30px;
+  width: var(--iconSize);
 }
 
 .results li h2,
@@ -132,16 +151,18 @@ body {
 
 .results li h2 {
   color: rgb(255, 255, 255);
+  color: var(--light);
   font-size: 1.3em;
-  line-height: 25px
-}
+  line-height: 25px;
 
-.results li h2:last-child {
-  line-height: 40px;
+  &:last-child {
+    line-height: 40px;
+  }
 }
 
 .results li h3 {
   color: rgb(239, 240, 235);
+  color: var(--grayLight);
   font-size: 1em;
   line-height: 15px;
 }
@@ -149,6 +170,7 @@ body {
 .results li.active,
 .results li:hover {
   background-color: rgb(73, 80, 87);
+  background-color: var(--grayDark);
 }
 
 /*# sourceMappingURL=main.css.map */
